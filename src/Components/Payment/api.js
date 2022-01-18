@@ -24,7 +24,7 @@ export const getData = (id) => (dispatch) => {
 };
 
 async function sendData(data) {
-    await fetch("http://localhost:3000/data", {
+    await fetch("https://oyouser.herokuapp.com/data", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -33,7 +33,7 @@ async function sendData(data) {
     }).then((response) => response.json());
 }
 async function sendHotelData(data) {
-    await fetch("http://localhost:3000/booked_hotel", {
+    await fetch("https://oyouser.herokuapp.com/booked_hotel", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

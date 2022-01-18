@@ -25,7 +25,7 @@ export default function Right() {
     };
 
     const handleLogin = () => {
-        fetch(`http://localhost:3000/data?numb=${numb}&pass=${pass}`)
+        fetch(`https://oyouser.herokuapp.com/data?numb=${numb}&pass=${pass}`)
             .then((response) => response?.json())
             .then((data) => {
                 console.log(data)
@@ -47,7 +47,7 @@ export default function Right() {
     };
 
     async function sendData(data) {
-        await fetch("http://localhost:3000/data", {
+        await fetch("https://oyouser.herokuapp.com/data", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -63,7 +63,8 @@ export default function Right() {
             pass,
             id: uuid()
         };
-        numb === "" || mail === "" || pass === ""
+        console.log(payload, "hello")
+        !numb || !mail || !pass
             ? alert("Enter Valid Details")
             : sendData(payload) && dispatch(loginSuccess(payload.id, payload.mail, payload.numb)) && history.goBack();
     };
@@ -92,7 +93,7 @@ export default function Right() {
                             <input type="password" value={pass} onChange={handlePassChange} />
                         </div>
                         <div>
-                            <button onClick={handleLogin} disabled={!numb || !pass}>
+                            <button onClick={handleLogin} >
                                 Verify Number
                             </button>
                         </div>
@@ -132,7 +133,7 @@ export default function Right() {
                             <input type="password" value={pass} onChange={handlePassChange} />
                         </div>
                         <div>
-                            <button onClick={handleSignup} disabled={!numb || !pass || !mail}>
+                            <button onClick={handleSignup} >
                                 Verify Number
                             </button>
                         </div>
