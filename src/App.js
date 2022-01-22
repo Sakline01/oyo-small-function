@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       {/* <Navbar2 /> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <AllRoutes />
     </div>
   );

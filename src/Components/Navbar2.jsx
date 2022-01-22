@@ -24,7 +24,7 @@ const Navbar2 = () => {
                 >
                     {isAuth ?
                         <>
-                            <h3 className={style.heading}><AccountCircleIcon sx={{ fontSize: 40 }} />{mail}</h3>
+                            <h3 className={style.heading}><AccountCircleIcon sx={{ fontSize: 40 }} />{mail.split("@").slice(0, 1).join("")}</h3>
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                                 <div className={style.userLogout}> <UserLogout /></div>
                             </div>

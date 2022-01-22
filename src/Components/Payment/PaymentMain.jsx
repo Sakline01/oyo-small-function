@@ -53,8 +53,9 @@ export function PaymentMain() {
               onClick={() => {
                 history.push("/");
               }}
-              src="/Images/Payment/Union.svg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/OYO_Rooms_%28logo%29.png/640px-OYO_Rooms_%28logo%29.png"
               alt="image"
+              style={{ height: '120px', width: '150px' }}
             />
           </div>
         </div>

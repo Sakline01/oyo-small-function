@@ -11,6 +11,7 @@ import ElevatorIcon from "@mui/icons-material/Elevator";
 import { Link } from "react-router-dom";
 import Footer from "../Components/footer/Footer";
 import { Skeleton } from "@mui/material";
+import Navbar2 from "../Components/Navbar2";
 
 // var data = [];
 var slideImages = [];
@@ -69,6 +70,7 @@ function UserDetails() {
   />;
   return (
     <>
+      <Navbar2 />
       <div>
         <div>
           <Slide>
